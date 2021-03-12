@@ -1,0 +1,752 @@
+@charset "utf-8";
+/* 인트로 포트폴리오 미디어쿼리 - media.css */
+
+
+
+
+/*********** 수정할 사항***************/
+/*
+ 테블릿 view부터 100% 해제!
+
+*/
+
+/******************************/
+
+
+
+@media only screen and (max-width: 1920px) {}
+
+/*모바일 버전 레이아웃 으로 변경*/
+@media only screen and (max-width: 1400px) {
+
+    .contant_wrap {
+        width: 100%;
+        padding: 0;
+        padding-top: 60px;
+    }
+
+    .contant_list {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contant_list li {
+        width: 100px;
+        height: 100px;
+    }
+
+    .list_icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .start {
+        height: 70px;
+    }
+
+    .start,
+    .st_top,
+    .st_bottom {
+        background: none;
+    }
+
+    .st_top,
+    st_bottom {
+        display: none;
+    }
+
+    .st_mid {
+        display: none;
+    }
+
+    .htxt {
+        display: none;
+    }
+
+    .st_right {
+        position: fixed;
+        width: auto;
+        height: auto;
+        right: 2%;
+        top: 2%;
+        background: none;
+    }
+
+    .time {
+        color: #fff;
+        width: auto;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+        font-size: 24px;
+        position: static;
+    }
+
+    .st_left {
+        width: 60px;
+        height: 60px;
+        background-color: #358F35;
+        border-radius: 50%;
+        margin-left: 1%;
+    }
+
+    .st_left h2 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .st_left > h2 img {
+        width: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .start_menu_wrap {
+        width: 100%;
+        height: calc(100% - 120px);
+    }
+
+    .start_menu {
+        position: fixed;
+        bottom: 0;
+        width: 30%;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+        background-color: rgba(255, 255, 255, 0.79);
+        border: 2px solid #205BC4;
+        overflow: hidden;
+        display: none;
+    }
+
+    /**************************************************/
+    .popup_design {
+        width: 100% !important;
+        height: 100% !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+
+    .cooper_map_select_list .site_prevw {
+        flex: 1.2;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .program > ul > li:last-child {
+        flex: 2;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {
+    .loding_grap {
+        width: 20%;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .contant_list {
+        width: 60%;
+    }
+
+    .loding_grap {
+        bottom: 14%;
+    }
+
+    .map_select_area {
+        width: 90%;
+    }
+
+    .map_select_list > li {
+        min-height: 260px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .loding_grap {
+        bottom: 12%;
+    }
+
+    .intro_cont {
+        top: 20%;
+    }
+
+    .start_menu {
+        width: 40%;
+    }
+
+    .clean_work > h3 {
+        width: 60%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+    }
+
+    .clean_work > h3 br {
+        display: block;
+    }
+
+    .clean_work > h3 > img {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto 12px auto;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    /*
+    .character_select_wrap * {
+        outline: 1px dashed red;
+    }
+*/
+
+    .character_select_area > ul {}
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .loding_grap {
+        width: 24%;
+    }
+
+    .contant_list {
+        width: 70%;
+    }
+
+    .character_select_wrap {}
+
+    .character_select_area {
+        height: 160%;
+    }
+
+    .character_info {
+        height: auto;
+    }
+
+    .character_select_area > ul {
+        height: auto;
+        display: block;
+    }
+
+    .character_select_area > ul > li:nth-child(1) {
+        height: 36vw;
+        /*임의로 준 크기*/
+    }
+
+    .character_select_area > ul > li:nth-child(2) {}
+
+    .my_character img {
+        /*        width: 30vw;*/
+        width: 20%;
+    }
+
+    .character_info {
+        padding-left: 0;
+        padding: 0 2%;
+    }
+
+    .map_select_list > li {
+        min-height: 200px;
+    }
+
+    .finst_area {
+        width: 80%;
+    }
+
+    .cooper_map_select_list > li {
+        min-height: 180px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .map_select_list {}
+
+    .map_select_list > li {
+        display: block;
+        margin-bottom: 3vw;
+    }
+
+    .map_select_tit {
+        font-size: 7vw;
+        margin-bottom: 4vw;
+    }
+
+    .cooper_map_tit {
+        font-size: 7vw;
+        margin-bottom: 3vw;
+    }
+
+
+    .site_name {
+        font-size: 6vw;
+        line-height: 8vw;
+    }
+
+    .site_prevw {
+        width: 400px;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    .site_prevw span {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cooper_map_select_list .site_prevw {
+        width: 380px;
+        height: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .cooper_map_select_list > li {
+        width: 90%;
+        margin: 0 auto;
+        min-height: 240px;
+        flex-direction: column;
+    }
+
+    .cooper_map_select_list ~ h5 {
+        margin-top: 20px;
+
+    }
+
+    @media only screen and (max-width: 800px) {
+
+        .intro_cont {
+            width: 540px;
+        }
+
+        .start_menu {
+            width: 46%;
+        }
+
+        .my_info_wrap {
+            padding-left: 0;
+        }
+
+        .my_info div {
+            width: auto;
+        }
+    }
+
+    @media only screen and (max-width: 780px) {
+        .char_skill li {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .loding_grap {
+            width: 30%;
+        }
+
+        .pop_menu_adress_tab li:nth-child(1) {
+            width: 100px;
+            text-align: center;
+            padding: 0;
+        }
+
+    }
+
+    @media only screen and (max-width: 680px) {
+        .char_skill li {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        .intro_cont {
+            position: relative;
+            left: 50%;
+            top: 14%;
+            transform: translateX(-50%);
+            width: 500px;
+            max-width: 80%;
+            height: 500px;
+        }
+
+        .intro_cont span {
+            font-size: 4rem;
+        }
+
+    }
+
+    @media only screen and (max-width: 610px) {
+        .my_function_window .pop_contant_wrap {
+            padding: 40px 0;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .intro_cont h1 big {
+            font-size: 5rem;
+        }
+
+        .loding_grap {
+            width: 34%;
+        }
+
+        .contant_list {
+            width: 90%;
+        }
+
+        .start_menu {
+            width: 60%;
+        }
+
+        .intro_cont span {
+            font-size: 3.5rem;
+        }
+
+        .finsh_tit {
+            font-size: 10vw;
+        }
+
+        .mov_bg {
+            height: 300px;
+        }
+
+        .finst_area h5 {
+            font-size: 6vw;
+        }
+    }
+
+    @media only screen and (max-width: 580px) {
+        .character_info > li:nth-child(6) {
+            padding: 10px 0;
+        }
+
+        .char_skill {
+            width: 240px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .char_skill li {
+            flex: auto;
+            width: 100px;
+            margin-right: 10px;
+        }
+
+
+        .char_skill li:nth-child(1),
+        .char_skill li:nth-child(2) {
+            margin-bottom: 10px;
+        }
+
+        .char_skill li:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+
+    @media only screen and (max-width: 560px) {
+        .trashcan_txt > ul {
+            flex-wrap: wrap;
+        }
+
+        .trashcan_txt > ul > li {
+            flex: auto;
+            width: 50%;
+        }
+    }
+
+    @media only screen and (max-width: 530px) {
+
+        .intro_cont h1 small {
+            text-align: center;
+        }
+
+        .intro_cont img {
+            position: absolute;
+            right: 0;
+            width: 400px;
+            max-width: 100%;
+        }
+
+    }
+
+    @media only screen and (max-width: 500px) {}
+
+    @media only screen and (max-width: 480px) {
+        .pop_contant {
+            height: calc(100% - 120px);
+        }
+
+        .intro_cont {
+            height: 480px;
+        }
+
+        .intro_cont h1 big {
+            margin-top: 10px;
+            font-size: 4.5rem;
+        }
+
+        .intro_cont span {
+            font-size: 3rem;
+        }
+
+        .loding_grap {
+            width: 40%;
+        }
+
+        .list_icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .start_menu {
+            width: 70%;
+        }
+
+        .pop_menu_tab {
+            height: auto;
+        }
+
+        .pop_menu_tab > ul {
+            flex-wrap: wrap;
+        }
+
+        .pop_menu_tab > ul > li {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            width: 50%;
+            border-top: 1px solid #8D9393;
+            border-right: 1px solid #8D9393;
+        }
+
+        .clean_work > h3 > div {
+            display: none;
+        }
+
+        .map_select_tit {
+            font-size: 10vw;
+            margin-bottom: 6vw;
+        }
+
+        .site_prevw {
+            width: 100%;
+        }
+
+        .site_name {
+            font-size: 8vw;
+            line-height: 10vw;
+        }
+
+        .cooper_map_select_list .site_prevw {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 440px) {
+        .intro_cont img {
+            width: 340px;
+        }
+
+        .intro_cont {
+            height: 440px;
+        }
+
+        .loding_grap {
+            bottom: 16%;
+        }
+
+        .finst_area {
+            top: 50%;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .intro_cont {
+            height: 400px;
+        }
+
+        .intro_cont h1 big {
+            font-size: 4rem;
+        }
+
+        .intro_cont span {
+            font-size: 2.2rem;
+        }
+
+        .loding_grap {
+            width: 50%;
+        }
+
+        .contant_list {
+            flex-wrap: wrap;
+        }
+
+        .character_select_area {
+            height: 140%;
+        }
+
+        .porfol_intro_area h3 {
+            margin-top: 0;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+
+        .intro_cont {
+            height: 380px;
+        }
+
+        .intro_cont h1 big {
+            font-size: 3.8rem;
+        }
+
+        .intro_cont span {
+            font-size: 2rem;
+        }
+
+        .bottom_adress ul {
+            font-size: 0.9rem;
+        }
+
+        .character_select_area {
+            height: 180%;
+        }
+
+        .porfol_logo {
+            height: 280px;
+            line-height: 280px;
+        }
+    }
+
+    @media only screen and (max-width: 360px) {
+        .intro_cont {
+            height: 360px;
+        }
+
+        .intro_cont h1 big {
+            font-size: 3.6rem;
+        }
+
+        .intro_cont span {
+            font-size: 1.8rem;
+        }
+
+        .mov_bg {
+            height: 280px;
+        }
+
+        .finst_area h5 {
+            font-size: 8vw;
+        }
+
+    }
+
+    @media only screen and (max-width: 350px) {
+        .intro_cont {
+            height: 350px;
+        }
+
+        .intro_cont h1 big {
+            font-size: 3.4rem;
+            text-align: center;
+        }
+
+        .intro_cont span {
+            font-size: 1.8rem;
+            right: -10px;
+        }
+
+        .loding_grap {
+            width: 60%;
+        }
+
+        .contant_list li {
+            width: 80px;
+            height: 80px;
+        }
+
+        .list_tit {
+            font-size: 0.9rem;
+        }
+
+        .list_icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .contant_list {
+            flex-wrap: wrap;
+        }
+
+        .start_menu {
+            width: 80%;
+        }
+
+        .bottom_adress ul {
+            font-size: 0.85rem;
+        }
+
+        .porfol_logo {
+            height: 260px;
+            line-height: 260px;
+        }
+
+    }
+
+    @media only screen and (max-width: 320px) {
+        .intro_cont {
+            height: 340px;
+        }
+
+        .intro_cont h1 big {
+            font-size: 3rem;
+        }
+
+        .intro_cont span {
+            font-size: 1.8rem;
+            right: -22px;
+        }
+
+        .character_select_area {
+            height: 260%;
+        }
+
+    }
+
+    @media only screen and (max-width: 300px) {
+
+        .intro_cont {
+            height: 320px;
+            top: 10%;
+        }
+
+        .intro_cont h1 big {
+            font-size: 3rem;
+        }
+
+        .intro_cont span {
+            font-size: 1.8rem;
+            right: -24px;
+        }
+
+        .bottom_adress ul {
+            padding: 0 10px;
+            font-size: 0.8rem;
+        }
+
+        .character_select_area {
+            height: 250%;
+        }
+    }

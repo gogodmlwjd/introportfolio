@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블릭 XP</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/resize.js"></script>
+    <!--<script src="js/doubletep.js"></script>-->
+    <script src="js/time.js"></script>
+</head>
+
+<body>
+    <div class="main_wrap">
+        <div class="contant_wrap">
+            <ul class="contant_list">
+                <li class="my_document">
+                    <div class="list_icon"></div>
+                    <h2 class="list_tit">내 정보</h2>
+                </li>
+                <li class="my_computer">
+                    <div class="list_icon"></div>
+                    <h2 class="list_tit">내 기능</h2>
+                </li>
+                <li class="trash_can">
+                    <div class="list_icon"></div>
+                    <h2 class="list_tit">휴지통</h2>
+                </li>
+                <li class="porfol">
+                    <div class="list_icon"></div>
+                    <h2 class="list_tit">포트폴리오</h2>
+                </li>
+            </ul>
+        </div>
+        <footer class="start">
+            <div class="st_top"></div>
+            <div class="st_bottom"></div>
+            <div class="st_left">
+                <h2>
+                    <img src="images/windows_logo.png" alt="윈도우 로고">
+                    <p class=htxt>시작</p>
+                </h2>
+            </div>
+            <div class="st_mid">
+                <ul class="windows_bar">
+                    <li style="display: none"></li>
+
+                    <!--li class="one"><div></div><span>작업표시줄 바</span></li-->
+                </ul>
+            </div>
+            <div class="st_right">
+                <div class="time">
+                    <span class="noon"></span>
+                    <span class="hour"></span> :
+                    <span class="min"></span>
+                </div>
+            </div>
+
+            <div class="start_menu">
+                <div class="user_name">
+                    <h1>
+                        <span></span> 이의정
+                    </h1>
+                </div>
+                <div class="start_menu_wrap"></div>
+                <div class="start_end"></div>
+            </div>
+        </footer>
+
+
+        <!--------------팝업창------------------->
+        <div class="popup_design my_info_window">
+            <div class="pop_tab">
+                <h3><img src="images/my_document.png" alt="내정보 아이콘" class="tit_icon"> 내 정보</h3>
+                <ul class="tab_icon">
+                    <li class="mini_btn"><span></span></li>
+                    <li class="maxy_btn"><span></span></li>
+                    <li class="close_btn"></li>
+                </ul>
+            </div>
+            <div class="pop_menu_tab">
+                <ul>
+                    <li><a href="#">Infomation</a></li>
+                    <li><a href="#">Favorites</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="pop_menu_adress_tab">
+                <ul>
+                    <li>주소</li>
+                    <li>
+                        <img src="images/my_document.png" alt="내정보 아이콘" class="tit_icon"> 내 정보()
+                    </li>
+                </ul>
+            </div>
+            <div class="pop_contant">
+                <div class="pop_contant_wrap my_info_wrap">
+                    <section class="my_info">
+                        <div>
+                            <a href="#">
+                                <span></span>
+                                <h2>About_me.file</h2>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup_design my_function_window">
+            <div class="pop_tab">
+                <h3><img src="images/my_computer.png" alt="내컴퓨터 아이콘" class="tit_icon">내 기능</h3>
+                <ul class="tab_icon">
+                    <li class="mini_btn"><span></span></li>
+                    <li class="maxy_btn"><span></span></li>
+                    <li class="close_btn"></li>
+                </ul>
+            </div>
+            <div class="pop_menu_tab">
+                <ul>
+                    <li>
+                        <a href="#">Infomation</a>
+                        <ul>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Favorites</a>
+                    </li>
+                    <li>
+                        <a href="#">Tools</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pop_menu_adress_tab">
+                <ul>
+                    <li>주소</li>
+                    <li>
+                        <img src="images/my_computer.png" alt="내컴퓨터 아이콘" class="tit_icon"> 내 기능()
+                    </li>
+                </ul>
+            </div>
+            <div class="pop_contant">
+                <div class="pop_contant_wrap">
+                    <section class="program">
+                        <h1 class="program_tit">프로그램(4)</h1>
+                        <ul>
+                            <li>
+                                <div></div>
+                                <h2>
+                                    Photoshop
+                                    <span class="work_ability"></span>
+                                    <small>100% 중 90% 사용가능</small>
+                                </h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>
+                                    Iiustration
+                                    <span class="work_ability"></span>
+                                    <small>100% 중 90% 사용가능</small>
+                                </h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>Adobe XD
+                                    <span class="work_ability"></span>
+                                    <small>100% 중 90% 사용가능</small>
+                                </h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>Balsamiq
+                                    <span class="work_ability"></span>
+                                    <small>100% 중 90% 사용가능</small>
+                                </h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>Sketch up
+                                    <span class="work_ability"></span>
+                                    <small>100% 중 90% 사용가능</small>
+                                </h2>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="skill">
+                        <h1 class="skill_tit">기술(4)</h1>
+                        <ul>
+                            <li>
+                                <div></div>
+                                <h2>HTML
+                                    <span class="work_ability"></span>
+                                    <small>100% 중 90% 사용가능</small>
+                                </h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>CSS
+                                    <span class="work_ability"></span>
+                                    <small>100% 중 90% 사용가능</small>
+                                </h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>JS
+                                    <span class="work_ability"></span>
+                                    <small>100% 중 90% 사용가능</small>
+                                </h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>JQUERY
+                                    <span class="work_ability"></span>
+                                    <small>100% 중 90% 사용가능</small>
+                                </h2>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup_design trash_can_window">
+            <div class="pop_tab">
+                <h3><img src="images/trash_can_clean.png" alt="휴지통 비우기" class="tit_icon">휴지통</h3>
+                <ul class="tab_icon">
+                    <li class="mini_btn"><span></span></li>
+                    <li class="maxy_btn"><span></span></li>
+                    <li class="close_btn"></li>
+                </ul>
+            </div>
+            <div class="pop_menu_tab">
+                <ul>
+                    <li><a href="#">Infomation</a></li>
+                    <li><a href="#">Favorites</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="pop_menu_adress_tab">
+                <ul>
+                    <li>주소</li>
+                    <li>
+                        <img src="images/trash_can.png" alt="휴지통 아이콘" class="tit_icon"> 휴지통()
+                    </li>
+                </ul>
+            </div>
+            <div class="pop_contant trash_can_wrap">
+                <div class="pop_contant_wrap trash_window">
+                    <section class="trashcan_clean">
+                        <div class="clean_work">
+                            <h3><img src="images/trash_can_clean.png" alt="휴지통 비우기" class="tit_icon">
+                                <div>
+                                    휴지통 <br>비우기
+                                </div>
+                            </h3>
+                        </div>
+                    </section>
+                    <section class="trashcan_txt">
+                        <ul>
+                            <li>
+                                <div></div>
+                                <h2>부정적인 생각</h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>게으름</h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>오글거리는 말3</h2>
+                            </li>
+                            <li>
+                                <div></div>
+                                <h2>오글거리는 말4</h2>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="popup_design portfolio_window">
+            <div class="pop_tab">
+                <h3><img src="images/code.png" alt="포트폴리오" class="tit_icon">포트폴리오</h3>
+                <ul class="tab_icon">
+                    <li class="mini_btn"><span></span></li>
+                    <li class="maxy_btn"><span></span></li>
+                    <li class="close_btn"></li>
+                </ul>
+            </div>
+            <div class="pop_menu_tab">
+                <ul>
+                    <li><a href="#">Infomation</a></li>
+                    <li><a href="#">Favorites</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="pop_menu_adress_tab">
+                <ul>
+                    <li>주소</li>
+                    <li>
+                        <img src="images/code.png" alt="포트폴리오" class="tit_icon"> 포트폴리오()
+                    </li>
+                </ul>
+            </div>
+            <div class="pop_contant portfolio_wrap">
+                <div class="pop_contant_wrap porfol_window">
+                    <section class="portfolio_intro_wrap">
+                        <div class="porfol_intro_area">
+                            <div>
+                                <h2 class="porfol_logo">LOGO!</h2>
+                            </div>
+                            <h3>- Please click anywhere -</h3>
+                        </div>
+                    </section>
+                    <!----------캐릭터 선택창---------->
+                    <section class="character_select_wrap">
+                        <div class="character_select_area">
+                            <ul>
+                                <li class="my_character"><img src="images/character.png" alt="내캐릭터" class="charact_img"></li>
+                                <li>
+                                    <ul class="character_info">
+                                        <li>
+                                            <h4>이름 : 이의정</h4>
+                                        </li>
+                                        <li>
+                                            <h4>성별 : 여</h4>
+                                        </li>
+                                        <li class="character_story">
+                                            <p>
+                                                디자인과 퍼블리싱에 능이버섯 캐릭터.<br>
+                                                과거, 평범한 디자인 전공자로서 활동하였으나,<br>
+                                                그럴싸하게 갇다붙인 이유로 퍼블리셔를 향한ㅅㅂ<br>
+                                                여정을 떠나게 되었다.<br><br>
+                                                어쩌구 저쩌구지만 호기심이 강하고<br>
+                                                이러쿵 저러쿵을 좋아하고<br>
+                                                솰라솰라에 관심이 많다.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h4>생성날짜 : 1996.10.10</h4>
+                                        </li>
+                                        <li>
+                                            <h4>기본스킬</h4>
+                                        </li>
+                                        <li>
+                                            <ul class="char_skill">
+                                                <li>(디자인)</li>
+                                                <li>(그림)</li>
+                                                <li>(코딩)</li>
+                                                <li>(예의범절)</li>
+                                            </ul>
+                                        </li>
+                                        <li class="next_btn charac_select_btn">
+                                            <h4>
+                                                <a href="#">NEXT →</a>
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-----------포트폴리오 선택창------------>
+                    <section class="map_select_wrap">
+                        <div class="map_select_area">
+                            <h4 class="map_select_tit">맵을 선택하세요</h4>
+                            <ul class="map_select_list">
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">Digital Ocean</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다1.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">Masstige Deco</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다2.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4 class="cooper_map_tit"> 협동 플레이 맵</h4>
+                            <ul class="cooper_map_select_list">
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">CGV</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다1.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">INDIGO</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다2.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">하나투어</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다3.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">수행코디</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다4.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">카본뷰티</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다5.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">수학박사</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다6.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">로아맘</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다7.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">마이로컬푸드</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다8.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">라임 잉글리시</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다9.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="site_prevw">
+                                        <span></span>
+                                    </a>
+                                    <div class="site_explan">
+                                        <h5 class="site_name">알티오라</h5>
+                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다10.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h5 class="prev_btn">
+                                <a href="#">← Prev</a>
+                            </h5>
+                            <h5 class="next_btn map_select_btn">
+                                <a href="#">Next →</a>
+                            </h5>
+                        </div>
+                    </section>
+                    <section class="finsh_wrap">
+                        <div class="finst_area">
+                            <h4 class="finsh_tit">Thank you for<span></span> watching</h4>
+                            <!-- 1. 걷는 소년 -->
+                            <div class="mov_bg">
+                                <div class="ani spani1">
+                                    <span class="ir">걷는 소년</span>
+                                </div>
+                            </div>
+                            <h5 class="go_fir"><a href="#">- 처음으로 -</a></h5>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="intro_window">
+        <div class="intro_cont">
+            <img src="images/windows_logo.png" alt="윈도우로고">
+            <h1>
+                <small>EuiJeoungsoftⓒ</small>
+                <big>
+                    PORTFOLIO
+                    <span>XP</span>
+                </big>
+
+            </h1>
+        </div>
+        <div class="loding_grap">
+            <ul class="grap_list">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="bottom_adress">
+            <ul>
+                <li>CopyrightⓒI want your corporation</li>
+                <li>EuiJeoungsoft</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
