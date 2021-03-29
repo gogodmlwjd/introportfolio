@@ -39,6 +39,10 @@ function showTime() {
     document.querySelector(".noon").innerText = noon;
 
 
+    //시간넣기(오후일 경우 12를 뺀다! - 24시간제로 표시되기때문)
+    if (H > 12) H = H - 12;
+
+
     // 한자리 숫자이면 앞에 "0"넣기
     if (H < 10) H = "0" + H;
     document.querySelector(".hour").innerText = H;

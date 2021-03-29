@@ -16,8 +16,62 @@
 
 @media only screen and (max-width: 1920px) {}
 
+@media only screen and (max-width: 1760px) {
+    .st_power {
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+    .time {
+        font-size: 1.4vw;
+    }
+
+    .st_power {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .htxt {
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 1520px) {
+    .st_power span {
+        margin-right: 10px;
+    }
+
+    .start_end {
+        font-size: 0.925rem;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .start_end {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 1420px) {
+    .htxt {
+        margin-left: 4px;
+    }
+}
+
+@media only screen and (max-width: 1420px) {
+    .start_end {
+        font-size: 0.825rem;
+    }
+}
+
 /*모바일 버전 레이아웃 으로 변경*/
 @media only screen and (max-width: 1400px) {
+
+    .start_end {
+        font-size: 1rem;
+    }
 
     .contant_wrap {
         width: 100%;
@@ -104,6 +158,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        height: auto;
+        margin-top: 0;
+
     }
 
     .start_menu_wrap {
@@ -121,6 +178,10 @@
         border: 2px solid #205BC4;
         overflow: hidden;
         display: none;
+    }
+
+    .st_token {
+        display: block;
     }
 
     /**************************************************/
@@ -150,6 +211,14 @@
 
 }
 
+@media only screen and (max-width: 1250px) {
+    .character_info p {
+        font-size: 1.625rem;
+        line-height: 1.75rem;
+    }
+
+}
+
 @media only screen and (max-width: 1200px) {
     .contant_list {
         width: 60%;
@@ -168,6 +237,13 @@
     }
 }
 
+@media only screen and (max-width: 1170px) {
+    .character_info p {
+        font-size: 1.5rem;
+        line-height: 1.625rem;
+    }
+
+}
 @media only screen and (max-width: 1100px) {
     .loding_grap {
         bottom: 12%;
@@ -226,7 +302,7 @@
     .character_select_wrap {}
 
     .character_select_area {
-        height: 160%;
+        height: 120%;
     }
 
     .character_info {
@@ -246,8 +322,7 @@
     .character_select_area > ul > li:nth-child(2) {}
 
     .my_character img {
-        /*        width: 30vw;*/
-        width: 20%;
+        width: 26%;
     }
 
     .character_info {
@@ -348,6 +423,9 @@
             width: 120px;
             height: 120px;
         }
+        .char_skill li p{
+            line-height: 120px;
+        }
     }
 
     @media only screen and (max-width: 700px) {
@@ -367,6 +445,9 @@
         .char_skill li {
             width: 100px;
             height: 100px;
+        }
+        .char_skill li p{
+            line-height: 100px;
         }
     }
 
@@ -428,6 +509,11 @@
     }
 
     @media only screen and (max-width: 580px) {
+
+        .character_select_area {
+            height: 140%;
+        }
+
         .character_info > li:nth-child(6) {
             padding: 10px 0;
         }
@@ -460,9 +546,17 @@
             flex-wrap: wrap;
         }
 
+        .pop_contant_wrap.trash_window section:nth-child(1) {
+            width: 30%;
+        }
+
         .trashcan_txt > ul > li {
             flex: auto;
             width: 50%;
+        }
+
+        .clean_work > h3 > div {
+            display: none;
         }
     }
 
@@ -531,10 +625,6 @@
             border-right: 1px solid #8D9393;
         }
 
-        .clean_work > h3 > div {
-            display: none;
-        }
-
         .map_select_tit {
             font-size: 10vw;
             margin-bottom: 6vw;
@@ -570,6 +660,17 @@
         .finst_area {
             top: 50%;
         }
+
+        .character_select_area {
+            height: 200%;
+        }
+
+    }
+
+    @media only screen and (max-width: 420px) {
+        .character_select_area {
+            height: 180%;
+        }
     }
 
     @media only screen and (max-width: 400px) {
@@ -593,12 +694,13 @@
             flex-wrap: wrap;
         }
 
-        .character_select_area {
-            height: 140%;
-        }
-
         .porfol_intro_area h3 {
             margin-top: 0;
+        }
+
+        .porfol_logo {
+            width: 280px;
+            height: 280px;
         }
     }
 
@@ -619,14 +721,11 @@
         .bottom_adress ul {
             font-size: 0.9rem;
         }
+    }
 
-        .character_select_area {
-            height: 180%;
-        }
-
-        .porfol_logo {
-            height: 280px;
-            line-height: 280px;
+    @media only screen and (max-width: 340px) {
+        .clean_work {
+            height: 90px;
         }
     }
 

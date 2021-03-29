@@ -244,7 +244,7 @@ body {
 }
 
 .st_left {
-    width: 8%;
+    width: 10%;
     height: 100%;
     border-radius: 0 14px 14px 0;
     background-color: #358F35;
@@ -255,13 +255,21 @@ body {
     width: 80%;
     margin: 0 auto;
     height: 100%;
-    color: #fff;
+    display: flex;
+    line-height: 2.25rem;
 }
 
 .st_left > h2 img {
-    vertical-align: -4px;
-    width: 28px;
+    height: 28px;
+    margin-top: 4px;
 }
+
+.htxt{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
 
 .st_mid {
     width: 100%;
@@ -306,8 +314,7 @@ body {
 .time {
     color: #fff;
     width: 90%;
-    /*    font-size: 1.4vw;*/
-    font-size: 24px;
+    font-size: 1.2vw;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -355,7 +362,7 @@ body {
 }
 
 .user_name span {
-    background-color: #ccc;
+    background:url(../images/start_thum.png) no-repeat center / cover #fff;
     width: 48px;
     height: 48px;
     border-radius: 4px;
@@ -365,12 +372,101 @@ body {
 .start_menu_wrap {
     width: 100%;
     height: 380px;
+    padding-top: 5px;
+}
+.start_menu_list{
+    width: 100%;
+}
+.start_menu_list li a{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+}
+.start_menu_list li h2{
+    font-size: 1.25rem;
+}
+.start_menu_list li a:hover{
+    background-color: #ccc;
+}
+.start_menu_list li a span{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+}
+.start_menu_list li:nth-child(1) a span{
+    background:url(../images/my_document.png)no-repeat center / cover;
+}
+.start_menu_list li:nth-child(2) a span{
+    background:url(../images/my_computer.png)no-repeat center / cover;
+}
+.start_menu_list li:nth-child(3) a span{
+    background:url(../images/trash_can.png)no-repeat center / cover;
+}
+.start_menu_list li:nth-child(4) a span{
+    background:url(../images/code.png)no-repeat center / cover;
 }
 
 .start_end {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 50px;
     background-image: linear-gradient(#3585E5, #0E60CD);
+}
+
+.st_token{
+    display: none;
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+.st_token img{
+    position: absolute;
+    width: 40px;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.st_token img:hover{
+    opacity: .5;
+}
+.st_power{
+    display: flex;
+    color: #fff;
+    justify-content: flex-end;
+    align-items: center;
+    width: 86%;
+    height: 100%;
+    margin: 0 0 0 auto;
+    padding-right: 20px;
+}
+.st_power:hover{
+    background: rgba(0, 0, 0, 0.37);
+}
+.st_power span{
+    position: relative;
+    background-image: linear-gradient(to bottom right, #F2B1A0, #E43B04);
+    border-radius: 6px;
+    border:2px solid #fff;
+    width: 38px;
+    height: 38px;
+    margin-right:20px;
+}
+.st_power img{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.st_power span:hover{
+    opacity: .8;
 }
 
 
@@ -396,8 +492,8 @@ body {
 
 /*최대화 버튼 클래스*/
 .popup_design.active {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     left: 0 !important;
     top: 0 !important;
     transform: none;
@@ -439,6 +535,9 @@ body {
     margin-left: 2px;
     /*미디어 쿼리 때문에 번거로워짐 border 까지 img 로 변경*/
 }
+.mini_btn:hover, .maxy_btn:hover, .close_btn:hover{
+    opacity: .7; 
+}
 
 .mini_btn span {
     margin-left: 4px;
@@ -463,7 +562,15 @@ body {
 
 .close_btn {
     background-color: #E54D1E;
+    position: relative;
 
+}
+.close_btn img {
+    width: 74%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .pop_menu_tab,
@@ -475,17 +582,19 @@ body {
     /*    border-bottom: 1px solid #8D9393;*/
 }
 
-.pop_menu_tab ul,
-.pop_menu_adress_tab ul {
+.pop_menu_tab > ul,
+.pop_menu_adress_tab > ul {
     /*    padding-left: 20px;*/
     display: flex;
     height: 100%;
     align-items: center;
 }
 
-.pop_menu_tab > ul li {
+.pop_menu_tab > ul >li {
     padding-left: 20px;
     margin-right: 30px;
+    height: 30px;
+    position: relative;
 }
 
 .pop_menu_adress_tab li {
@@ -505,6 +614,39 @@ body {
     width: 90%;
     background-color: #fff;
     border-left: 0;
+}
+
+.pop_menu_tab > ul > li > ul{
+    display: none;
+    left: 0;
+    width: 220px;
+    border: 1px solid #8D9393;
+    position: absolute;
+    background-color: #f7f3e2;
+    font-size: 14px;
+    text-align: center;
+}
+.pop_menu_tab > ul > li:hover a{
+    opacity: .6;
+}
+.pop_menu_tab > ul >li:nth-child(1):hover .Info_list{
+    display: block;
+}
+.pop_menu_tab > ul > li:nth-child(2):hover .favor_list{
+    display: block;
+}
+.pop_menu_tab > ul > li:nth-child(3):hover .cont_list{
+    display: block;
+}
+
+.pop_menu_tab > ul > li > ul li:hover{
+    background-color: #c4c1b1;
+} 
+.pop_menu_tab > ul >li > ul img{
+    width:20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 /**************************/
@@ -559,10 +701,7 @@ body {
     align-items: center;
 }
 
-.my_info_window > section > ul > li div,
-.program > ul > li div,
-.skill > ul > li div,
-.trashcan_txt > ul > li div {
+.program_icon{
     width: 50px;
     height: 50px;
 }
@@ -598,23 +737,23 @@ body {
 
 /************내 기능*************/
 
-.program ul li:nth-child(1) div {
+.program ul li:nth-child(1) .program_icon {
     background: url(../images/photoshop.png) no-repeat center / cover;
 }
 
-.program ul li:nth-child(2) div {
+.program ul li:nth-child(2) .program_icon {
     background: url(../images/iiustrator.png) no-repeat center / cover;
 }
 
-.program ul li:nth-child(3) div {
+.program ul li:nth-child(3) .program_icon {
     background: url(../images/adobe_xd.png) no-repeat center / cover;
 }
 
-.program ul li:nth-child(4) div {
+.program ul li:nth-child(4) .program_icon {
     background: url(../images/balsamiq.png) no-repeat center / cover;
 }
 
-.program ul li:nth-child(5) div {
+.program ul li:nth-child(5) .program_icon {
     background: url(../images/skatch_up.png) no-repeat center / cover;
 }
 
@@ -639,26 +778,34 @@ body {
     width: 100%;
     height: 10px;
     margin-top: 10px;
-    background-color: #ccc;
+    border: 1px solid #afafaf;
+    background: #bbb;
 }
+span.active{
+    display: block;
+    background-image: linear-gradient(#31A8CC, #77E2F8, #0882a3);
+    height: 100%;
+    width: 0;
+}
+
 
 .pop_contant_wrap section img {
     display: block;
 }
 
-.skill ul li:nth-child(1) div {
+.skill ul li:nth-child(1) .program_icon {
     background: url(../images/html5.png) no-repeat center / cover;
 }
 
-.skill ul li:nth-child(2) div {
+.skill ul li:nth-child(2) .program_icon {
     background: url(../images/css.png) no-repeat center / cover;
 }
 
-.skill ul li:nth-child(3) div {
+.skill ul li:nth-child(3) .program_icon {
     background: url(../images/javascript.png) no-repeat center / cover;
 }
 
-.skill ul li:nth-child(4) div {
+.skill ul li:nth-child(4) .program_icon {
     background: url(../images/jquery.png) no-repeat center / cover;
 }
 
@@ -718,6 +865,8 @@ body {
 
 
 .trashcan_txt ul li div {
+    width: 50px;
+    height: 50px;
     margin: 0 auto;
     background: url(../images/txt.png) no-repeat center / cover;
 }
@@ -796,8 +945,11 @@ body {
     width: 300px;
     max-width: 100%;
     height: 300px;
-    line-height: 300px;
     margin: 0 auto;
+    opacity: 0;
+}
+.porfol_logo img{
+    width: 100%;
 }
 
 .porfol_intro_area h3 {
@@ -817,7 +969,7 @@ body {
 
 
 .character_select_wrap * {
-    outline: 1px dashed red;
+/*    outline: 1px dashed red;*/
 }
 
 .character_select_area {
@@ -830,7 +982,7 @@ body {
     position: absolute;
     width: 80%;
 /*    height: 90%;*/
-    height: auto%;
+    height: auto;
     max-width: 100%;
     display: flex;
     left: 50%;
@@ -869,25 +1021,26 @@ body {
 
 .character_info > li {
     width: 100%;
-/*    flex: 1;*/
-    justify-items: center;
 }
 
+.character_info li > h4{
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
 
 .character_story {
-    background-color: blue;
-    font-size: 1.75rem;
+/*    background-color: blue;*/
     margin-bottom: 20px;
 }
 
 .character_info p {
     height: 100%;
-    line-height: 28px;
+    font-size: 1.75rem;
+    line-height: 1.875rem;
 }
 
 .character_info > li:nth-child(6) {
     padding: 2% 0;
-    background-color: green;
 }
 
 .char_skill {
@@ -895,14 +1048,50 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    color: #fff;
 }
 
 .char_skill li {
+    position: relative;
     width: 140px;
     height: 140px;
     margin-right: 10px;
-    background-color: yellow;
+    text-align: center;
+}
 
+.char_skill li:hover p{
+    opacity: 1;
+    background-color:rgba(0, 0, 0, 0.7);
+}
+.char_skill li p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 140px;
+    /*가운데 때문에 임의로 크기지정*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+
+.char_skill li:nth-child(1) {
+    background: url(../images/design.png) no-repeat center / cover;
+}
+
+.char_skill li:nth-child(2) {
+    background: url(../images/draw.png) no-repeat center / cover;
+}
+
+
+.char_skill li:nth-child(3) {
+    background: url(../images/coding.png) no-repeat center / cover;
+}
+
+
+.char_skill li:nth-child(4) {
+    background: url(../images/manner.png) no-repeat center / cover;
 }
 
 .char_skill li:last-child {

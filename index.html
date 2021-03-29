@@ -67,8 +67,26 @@
                         <span></span> 이의정
                     </h1>
                 </div>
-                <div class="start_menu_wrap"></div>
-                <div class="start_end"></div>
+                <div class="start_menu_wrap">
+                    <ul class="start_menu_list">
+                        <li class="st_myinfo">
+                            <a href="#"><span></span><h2>내 정보</h2></a>
+                        </li>
+                        <li class="st_mycom">
+                            <a href="#"><span></span><h2>내 기능</h2></a>
+                        </li>
+                        <li class="st_trash">
+                            <a href="#"><span></span><h2>휴지통</h2></a>
+                        </li>
+                        <li class="st_porfol">
+                            <a href="#"><span></span><h2>포트폴리오</h2></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="start_end">
+                    <a href="#" class="st_token"><img src="images/windows_logo_wh.png" alt="시작토큰버튼"></a>
+                    <a href="#" class="st_power"><span><img src="images/power_off.png" alt="전원"></span>포트폴리오 끄기</a>
+                </div>
             </div>
         </footer>
 
@@ -80,15 +98,43 @@
                 <ul class="tab_icon">
                     <li class="mini_btn"><span></span></li>
                     <li class="maxy_btn"><span></span></li>
-                    <li class="close_btn"></li>
+                    <li class="close_btn"><img src="images/x_icon_wh.png" alt="닫기아이콘"></li>
                 </ul>
             </div>
             <div class="pop_menu_tab">
                 <ul>
-                    <li><a href="#">Infomation</a></li>
-                    <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Tools</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="#">Infomation</a>
+                        <ul class="Info_list">
+                            <li><img src="images/name.png" alt="이름">name : 이의정</li>
+                            <li><img src="images/birth.png" alt="탄생일">birth : 1996.10.10</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Favorites</a>
+                        <ul class="favor_list">
+                            <li><img src="images/movie.png" alt="영화">Movie</li>
+                            <li><img src="images/comic.png" alt="만화">Comics</li>
+                            <li><img src="images/game.png" alt="게임">Game</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="cont_list">
+                            <li><img src="images/phone.png" alt="전화번호">010-7752-9610</li>
+                            <li><img src="images/mail.png" alt="메일">gogodmlwjd@naver.com</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!--
+                        <a href="#">Tools</a>
+                        <ul class="tool_list">
+                            <li>PHOTOSHOP</li>
+                            <li></li>
+                        </ul>
+-->
+                    </li>
+
                 </ul>
             </div>
             <div class="pop_menu_adress_tab">
@@ -119,26 +165,36 @@
                 <ul class="tab_icon">
                     <li class="mini_btn"><span></span></li>
                     <li class="maxy_btn"><span></span></li>
-                    <li class="close_btn"></li>
+                    <li class="close_btn"><img src="images/x_icon_wh.png" alt="닫기아이콘"></li>
                 </ul>
             </div>
             <div class="pop_menu_tab">
                 <ul>
                     <li>
                         <a href="#">Infomation</a>
-                        <ul>
-
+                        <ul class="Info_list">
+                            <li><img src="images/name.png" alt="이름">name : 이의정</li>
+                            <li><img src="images/birth.png" alt="탄생일">birth : 1996.10.10</li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">Favorites</a>
-                    </li>
-                    <li>
-                        <a href="#">Tools</a>
+                        <ul class="favor_list">
+                            <li><img src="images/movie.png" alt="영화">Movie</li>
+                            <li><img src="images/comic.png" alt="만화">Comics</li>
+                            <li><img src="images/game.png" alt="게임">Game</li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">Contact</a>
+                        <ul class="cont_list">
+                            <li><img src="images/phone.png" alt="전화번호">010-7752-9610</li>
+                            <li><img src="images/mail.png" alt="메일">gogodmlwjd@naver.com</li>
+                        </ul>
                     </li>
+                    <li>
+                    </li>
+
                 </ul>
             </div>
             <div class="pop_menu_adress_tab">
@@ -153,75 +209,93 @@
                 <div class="pop_contant_wrap">
                     <section class="program">
                         <h1 class="program_tit">프로그램(4)</h1>
-                        <ul>
+                        <ul class="program_list">
                             <li>
-                                <div></div>
+                                <div class="program_icon"></div>
                                 <h2>
                                     Photoshop
-                                    <span class="work_ability"></span>
-                                    <small>100% 중 90% 사용가능</small>
+                                    <div class="work_ability">
+                                        <span></span>
+                                    </div>
+                                    <small>100% 중 96% 사용가능</small>
                                 </h2>
                             </li>
                             <li>
-                                <div></div>
+                                <div class="program_icon"></div>
                                 <h2>
                                     Iiustration
-                                    <span class="work_ability"></span>
+                                    <div class="work_ability">
+                                        <span></span>
+                                    </div>
                                     <small>100% 중 90% 사용가능</small>
                                 </h2>
                             </li>
                             <li>
-                                <div></div>
+                                <div class="program_icon"></div>
                                 <h2>Adobe XD
-                                    <span class="work_ability"></span>
-                                    <small>100% 중 90% 사용가능</small>
+                                    <div class="work_ability">
+                                        <span></span>
+                                    </div>
+                                    <small>100% 중 88% 사용가능</small>
                                 </h2>
                             </li>
                             <li>
-                                <div></div>
+                                <div class="program_icon"></div>
                                 <h2>Balsamiq
-                                    <span class="work_ability"></span>
-                                    <small>100% 중 90% 사용가능</small>
+                                    <div class="work_ability">
+                                        <span></span>
+                                    </div>
+                                    <small>100% 중 85% 사용가능</small>
                                 </h2>
                             </li>
                             <li>
-                                <div></div>
+                                <div class="program_icon"></div>
                                 <h2>Sketch up
-                                    <span class="work_ability"></span>
-                                    <small>100% 중 90% 사용가능</small>
+                                    <div class="work_ability">
+                                        <span></span>
+                                    </div>
+                                    <small>100% 중 70% 사용가능</small>
                                 </h2>
                             </li>
                         </ul>
                     </section>
                     <section class="skill">
                         <h1 class="skill_tit">기술(4)</h1>
-                        <ul>
+                        <ul class="skill_list">
                             <li>
-                                <div></div>
+                                <div class="program_icon"></div>
                                 <h2>HTML
-                                    <span class="work_ability"></span>
+                                    <div class="work_ability">
+                                        <span></span>
+                                    </div>
                                     <small>100% 중 90% 사용가능</small>
                                 </h2>
                             </li>
                             <li>
-                                <div></div>
+                                <div class="program_icon"></div>
                                 <h2>CSS
-                                    <span class="work_ability"></span>
+                                    <div class="work_ability">
+                                        <span></span>
+                                    </div>
                                     <small>100% 중 90% 사용가능</small>
                                 </h2>
                             </li>
                             <li>
-                                <div></div>
+                                <div class="program_icon"></div>
                                 <h2>JS
-                                    <span class="work_ability"></span>
-                                    <small>100% 중 90% 사용가능</small>
+                                    <div class="work_ability">
+                                        <span></span>
+                                    </div>
+                                    <small>100% 중 40% 사용가능</small>
                                 </h2>
                             </li>
                             <li>
-                                <div></div>
+                                <div class="program_icon"></div>
                                 <h2>JQUERY
-                                    <span class="work_ability"></span>
-                                    <small>100% 중 90% 사용가능</small>
+                                    <div class="work_ability">
+                                        <span></span>
+                                    </div>
+                                    <small>100% 중 60% 사용가능</small>
                                 </h2>
                             </li>
                         </ul>
@@ -236,15 +310,36 @@
                 <ul class="tab_icon">
                     <li class="mini_btn"><span></span></li>
                     <li class="maxy_btn"><span></span></li>
-                    <li class="close_btn"></li>
+                    <li class="close_btn"><img src="images/x_icon_wh.png" alt="닫기아이콘"></li>
                 </ul>
             </div>
             <div class="pop_menu_tab">
                 <ul>
-                    <li><a href="#">Infomation</a></li>
-                    <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Tools</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="#">Infomation</a>
+                        <ul class="Info_list">
+                            <li><img src="images/name.png" alt="이름">name : 이의정</li>
+                            <li><img src="images/birth.png" alt="탄생일">birth : 1996.10.10</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Favorites</a>
+                        <ul class="favor_list">
+                            <li><img src="images/movie.png" alt="영화">Movie</li>
+                            <li><img src="images/comic.png" alt="만화">Comics</li>
+                            <li><img src="images/game.png" alt="게임">Game</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="cont_list">
+                            <li><img src="images/phone.png" alt="전화번호">010-7752-9610</li>
+                            <li><img src="images/mail.png" alt="메일">gogodmlwjd@naver.com</li>
+                        </ul>
+                    </li>
+                    <li>
+                    </li>
+
                 </ul>
             </div>
             <div class="pop_menu_adress_tab">
@@ -300,15 +395,36 @@
                 <ul class="tab_icon">
                     <li class="mini_btn"><span></span></li>
                     <li class="maxy_btn"><span></span></li>
-                    <li class="close_btn"></li>
+                    <li class="close_btn"><img src="images/x_icon_wh.png" alt="닫기아이콘"></li>
                 </ul>
             </div>
             <div class="pop_menu_tab">
                 <ul>
-                    <li><a href="#">Infomation</a></li>
-                    <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Tools</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="#">Infomation</a>
+                        <ul class="Info_list">
+                            <li><img src="images/name.png" alt="이름">name : 이의정</li>
+                            <li><img src="images/birth.png" alt="탄생일">birth : 1996.10.10</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Favorites</a>
+                        <ul class="favor_list">
+                            <li><img src="images/movie.png" alt="영화">Movie</li>
+                            <li><img src="images/comic.png" alt="만화">Comics</li>
+                            <li><img src="images/game.png" alt="게임">Game</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="cont_list">
+                            <li><img src="images/phone.png" alt="전화번호">010-7752-9610</li>
+                            <li><img src="images/mail.png" alt="메일">gogodmlwjd@naver.com</li>
+                        </ul>
+                    </li>
+                    <li>
+                    </li>
+
                 </ul>
             </div>
             <div class="pop_menu_adress_tab">
@@ -324,7 +440,7 @@
                     <section class="portfolio_intro_wrap">
                         <div class="porfol_intro_area">
                             <div>
-                                <h2 class="porfol_logo">LOGO!</h2>
+                                <h2 class="porfol_logo"><img src="images/porfol_logo.png" alt="로고"></h2>
                             </div>
                             <h3>- Please click anywhere -</h3>
                         </div>
@@ -344,13 +460,12 @@
                                         </li>
                                         <li class="character_story">
                                             <p>
-                                                디자인과 퍼블리싱에 능이버섯 캐릭터.<br>
+                                                디자인과 퍼블리싱에 능한 캐릭터.<br>
                                                 과거, 평범한 디자인 전공자로서 활동하였으나,<br>
-                                                그럴싸하게 갇다붙인 이유로 퍼블리셔를 향한ㅅㅂ<br>
-                                                여정을 떠나게 되었다.<br><br>
-                                                어쩌구 저쩌구지만 호기심이 강하고<br>
-                                                이러쿵 저러쿵을 좋아하고<br>
-                                                솰라솰라에 관심이 많다.
+                                                평소 코딩에 대한 관심과 자기발전을 원해<br>
+                                                퍼블리셔를 향한 여정을 떠나게 되었다.<br><br>
+                                                호기심이 강하고 디자인과 그림을 좋아하고<br>
+                                                트렌드에 관심이 많다.<br>
                                             </p>
                                         </li>
                                         <li>
@@ -361,10 +476,10 @@
                                         </li>
                                         <li>
                                             <ul class="char_skill">
-                                                <li>(디자인)</li>
-                                                <li>(그림)</li>
-                                                <li>(코딩)</li>
-                                                <li>(예의범절)</li>
+                                                <li><p>디자인</p></li>
+                                                <li><p>그림</p></li>
+                                                <li><p>코딩</p></li>
+                                                <li><p>예의범절</p></li>
                                             </ul>
                                         </li>
                                         <li class="next_btn charac_select_btn">
@@ -388,7 +503,7 @@
                                     </a>
                                     <div class="site_explan">
                                         <h5 class="site_name">Digital Ocean</h5>
-                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다1.</p>
+                                        <p>이 사이트는 'Digital Ocean'이 라는 마케팅 회사의 사이트를 좀 더 기업 이미지에 맞게 세련된 느낌으로 리뉴얼한 사이트입니다.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -397,7 +512,7 @@
                                     </a>
                                     <div class="site_explan">
                                         <h5 class="site_name">Masstige Deco</h5>
-                                        <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다2.</p>
+                                        <p>이 사이트는 'Masstige Deco'라는 가구 쇼핑몰 사이트를 모던 하고 깔끔하고 제품과 쇼핑몰이란 사이트의 특성이 잘 부각되도록 저의 스타일로 재해석해본 리뉴얼 사이트입니다.</p>
                                     </div>
                                 </li>
                             </ul>
@@ -408,7 +523,7 @@
                                         <span></span>
                                     </a>
                                     <div class="site_explan">
-                                        <h5 class="site_name">CGV</h5>
+                                        <h5 class="site_name">Mega Box </h5>
                                         <p>이 사이트는 뭐 어쩌구 저쩌구 솰라 솰라 얄라리 얄라리셩 어쨌고 저짼 사이트입니다1.</p>
                                     </div>
                                 </li>

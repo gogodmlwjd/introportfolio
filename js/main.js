@@ -30,6 +30,26 @@ $(function () { /////// jQB ///////////////////////
     ////////////////창 클릭 모음/////////////////    
 
 
+
+
+    //    // 종료 버튼 클릭시
+    //    $(".start_end a").click(function WinClose() {
+    //        window.open('', '_self').close();
+    //
+    //    }); /// click /////
+
+    // 종료 버튼 클릭시
+    $(".start_end a").click(function () {
+        window.open('', '_self', '');
+        window.close();
+        return false;
+    });
+
+
+
+
+
+
     //HELP1 .pop_tab의 마우스를 누르고 있는 동안, popup_design이 움직이게 만들고 싶어요
     // 이게 어렵다면 그냥 움직임이 부자연스럽지 않게만..!(중요)
     // + 중심축? 움직임이 부자연스럽지 않게
@@ -54,6 +74,10 @@ $(function () { /////// jQB ///////////////////////
         windowtop++;
     }); /// draggable /////////////
 
+    $(".pop_menu_tab > ul > li > ul").css({
+        zIndex: +windowtop
+    }); // css ////
+
 
     var infobar = $('<li><div></div><span>내 정보</span></li>')
 
@@ -66,124 +90,10 @@ $(function () { /////// jQB ///////////////////////
     //    var bartit = document.createTextNode('A');
 
 
+
+
     var newT = $(window).height() / 2 - $(".popup_design").height() / 2;
     var newL = $(window).width() / 2 - $(".popup_design").width() / 2;
-
-
-
-
-    //// 아이콘 별 창 열기/////
-    
-    //(원본 click .dblclick 기능 충돌때문에 삭제)
-//    $(".my_document").click(function () {
-//        $(this).css({
-//            backgroundColor: "rgba(0, 0, 130, 0.7)"
-//        }); /// css ////
-//        $(this).siblings().css({
-//            backgroundColor: "transparent"
-//        }); // css ////
-//        //        $(".windows_bar").appendChild(bartit);
-//
-//    }); ////// click
-//
-//    $(".my_document").dblclick(function () {
-//        console.log($(window).height() / 2 + $(this).height() / 2);
-//        $(this).css({
-//            backgroundColor: "transparent"
-//        }); /// css /////
-//        $(".my_info_window").fadeIn().css({
-//            zIndex: windowtop++,
-//            top: newT + "px",
-//            left: newL + "px"
-//        }); /// css /////
-//
-//        let selm = $("h2", this).text();
-//        //console.log(selm);
-//        showMenu(selm);
-//    }); ////// dbclick //////////////////////////   
-    
-    
-    // 1. 내 정보
-    $(".my_document").click(function () {
-        console.log($(window).height() / 2 + $(this).height() / 2);
-        $(this).css({
-            backgroundColor: "transparent"
-        }); /// css /////
-        $(".my_info_window").fadeIn().css({
-            zIndex: windowtop++,
-            top: newT + "px",
-            left: newL + "px"
-        }); /// css /////
-
-        let selm = $("h2", this).text();
-        //console.log(selm);
-        showMenu(selm);
-    }); ////// click //////////////////////////
-
-    // 2. 내 기능
-    $(".my_computer").click(function () {
-
-        $(this).css({
-            backgroundColor: "transparent"
-        }); /// css /////
-        $(".my_function_window").fadeIn().css({
-            zIndex: windowtop++,
-            top: newT + "px",
-            left: newL + "px"
-        }); /// css /////
-        $(".funti_bar").show();
-
-        let selm = $("h2", this).text();
-        //console.log(selm);
-
-        showMenu(selm);
-
-    }); ////// click //////////////////////////
-
-
-
-    // 3. 휴지통
-    $(".trash_can").click(function () {
-
-        $(this).css({
-            backgroundColor: "transparent"
-        }); /// css /////
-
-        $(".trash_can_window").fadeIn().css({
-            zIndex: windowtop++,
-            top: newT + "px",
-            left: newL + "px"
-        }); /// css /////
-        $(".trash_bar").show();
-
-        let selm = $("h2", this).text();
-        //console.log(selm);
-        showMenu(selm);
-
-    }); ////// dbclick //////////////////////////
-
-
-    // 4. 포트폴리오
-    $(".porfol").click(function () {
-
-        $(this).css({
-            backgroundColor: "transparent"
-        }); /// css /////
-
-        $(".portfolio_window").fadeIn().css({
-            zIndex: windowtop++,
-            top: newT + "px",
-            left: newL + "px"
-        }); /// css /////
-        $(".porfol_bar").show();
-
-        let selm = $("h2", this).text();
-        //console.log(selm);
-        showMenu(selm);
-
-    }); ////// click //////////////////////////
-
-
 
 
     let minfo = {
@@ -208,14 +118,209 @@ $(function () { /////// jQB ///////////////////////
 
         if (stop)
             $(".windows_bar").append(minfo[txt]);
+
+
+        // 작업 표시줄 버튼 클릭시 다시 재활성화
+        var info_bar = $(".info_bar");
+        var funti_bar = $(".funti_bar");
+        var trash_bar = $(".trash_bar");
+        var porfol_bar = $(".porfol_bar");
+
+        var window_size = $(".info_bar").width;
+
+        info_bar.click(function () {
+            $(".my_info_window").animate({
+                left: newL,
+                bottom: newT,
+                height: "80%",
+                opacity: 1
+            }, 400); /// animate //////
+            $(".my_info_window").fadeIn();
+        }); ///// click ///////////////////////////
+
+        funti_bar.click(function () {
+            $(".my_function_window").animate({
+                left: newL,
+                bottom: newT,
+                height: "80%",
+                opacity: 1
+            }, 400); /// animate //////
+            $(".my_function_window").fadeIn();
+        }); ///// click ///////////////////////////
+
+
+        trash_bar.click(function () {
+            $(".trash_can_window").animate({
+                left: newL,
+                bottom: newT,
+                height: "80%",
+                opacity: 1
+            }, 400); /// animate //////
+            $(".trash_can_window").fadeIn();
+        }); ///// click ///////////////////////////
+
+        porfol_bar.click(function () {
+            $(".portfolio_window").animate({
+                left: newL,
+                bottom: newT,
+                height: "80%",
+                opacity: 1
+            }, 400); /// animate //////
+            $(".portfolio_window").fadeIn();
+        }); ///// click ///////////////////////////
+
+
     }; /////////// showMenu 함수 ///////////
 
 
 
     ////////////////////////////////////////////////////
 
+
+
+    //// 아이콘 별 창 열기/////
+
+    //(원본 click .dblclick 기능 충돌때문에 삭제)
+    //    $(".my_document").click(function () {
+    //        $(this).css({
+    //            backgroundColor: "rgba(0, 0, 130, 0.7)"
+    //        }); /// css ////
+    //        $(this).siblings().css({
+    //            backgroundColor: "transparent"
+    //        }); // css ////
+    //        //        $(".windows_bar").appendChild(bartit);
+    //
+    //    }); ////// click
+    //
+    //    $(".my_document").dblclick(function () {
+    //        console.log($(window).height() / 2 + $(this).height() / 2);
+    //        $(this).css({
+    //            backgroundColor: "transparent"
+    //        }); /// css /////
+    //        $(".my_info_window").fadeIn().css({
+    //            zIndex: windowtop++,
+    //            top: newT + "px",
+    //            left: newL + "px"
+    //        }); /// css /////
+    //
+    //        let selm = $("h2", this).text();
+    //        //console.log(selm);
+    //        showMenu(selm);
+    //    }); ////// dbclick //////////////////////////   
+
+
+    // 1. 내 정보
+    $(".my_document, .st_myinfo").click(function () {
+        console.log($(window).height() / 2 + $(this).height() / 2);
+        $(".my_info_window").fadeIn().css({
+            zIndex: windowtop++,
+            top: newT + "px",
+            left: newL + "px"
+        }); /// css /////
+
+        let selm = $("h2", this).text();
+        //console.log(selm);
+        showMenu(selm);
+    }); ////// click //////////////////////////
+
+    // 2. 내 기능
+    $(".my_computer, .st_mycom").click(function () {
+        $(".my_function_window").fadeIn().css({
+            zIndex: windowtop++,
+            top: newT + "px",
+            left: newL + "px"
+        }); /// css /////
+        $(".funti_bar").show();
+
+        let selm = $("h2", this).text();
+        //console.log(selm);
+
+        showMenu(selm);
+
+
+        //내 기능 창 열때 기능바 활성화
+        $(".program_list , .skill_list").find("span").addClass("active");
+
+        ///칸 별로 width 지정///
+        $(".program_list >li:nth-child(1) span")
+            .animate({
+                width: "96%"
+            }, 4000); /// animate ///
+        $(".program_list >li:nth-child(2) span")
+            .animate({
+                width: "90%"
+            }, 4000); /// animate ///
+        $(".program_list >li:nth-child(3) span")
+            .animate({
+                width: "88%"
+            }, 4000); /// animate ///
+        $(".program_list >li:nth-child(4) span")
+            .animate({
+                width: "85%"
+            }, 4000); /// animate ///
+        $(".program_list >li:nth-child(5) span")
+            .animate({
+                width: "70%"
+            }, 4000); /// animate ///
+
+        $(".skill_list >li:nth-child(1) span")
+            .animate({
+                width: "90%"
+            }, 4000); /// animate ///
+        $(".skill_list >li:nth-child(2) span")
+            .animate({
+                width: "90%"
+            }, 4000); /// animate ///
+        $(".skill_list >li:nth-child(3) span")
+            .animate({
+                width: "40%"
+            }, 4000); /// animate ///
+        $(".skill_list >li:nth-child(4) span")
+            .animate({
+                width: "60%"
+            }, 4000); /// animate ///
+
+    }); ////// click //////////////////////////
+
+
+
+    // 3. 휴지통
+    $(".trash_can, .st_trash").click(function () {
+        $(".trash_can_window").fadeIn().css({
+            zIndex: windowtop++,
+            top: newT + "px",
+            left: newL + "px"
+        }); /// css /////
+        $(".trash_bar").show();
+
+        let selm = $("h2", this).text();
+        //console.log(selm);
+        showMenu(selm);
+
+    }); ////// dbclick //////////////////////////
+
+
+    // 4. 포트폴리오
+    $(".porfol, .st_porfol").click(function () {
+        $(".porfol_logo").animate({
+            opacity: "1"
+        }, 2400); /// animate //////
+        $(".portfolio_window").fadeIn().css({
+            zIndex: windowtop++,
+            top: newT + "px",
+            left: newL + "px"
+        }); /// css /////
+        $(".porfol_bar").show();
+
+        let selm = $("h2", this).text();
+        //console.log(selm);
+        showMenu(selm);
+
+    }); ////// click //////////////////////////
+
+
     //// 토글 기능 //
-    $(".st_left").click(function () {
+    $(".st_left, .st_token").click(function () {
         if ($(".start_menu").hasClass("on")) {
             $(".start_menu").removeClass("on");
             $(".start_menu").fadeOut(700);
@@ -225,15 +330,22 @@ $(function () { /////// jQB ///////////////////////
         }
     }); ////////////// click /////////
 
+    var wize = window.outerWidth;
 
-
+    if (wize <= 1400) {
+        console.log("1400이하 크기!");
+        $(".st_left").click(function () {
+            $(this).fadeOut(200);
+        }); ///// click //////
+        $(".st_token").click(function () {
+            $(".st_left").fadeIn(200);
+        });
+    } /// if ////////////////
 
 
     ////////////////// 탭메뉴 기능 적용하기 ///////////////////////
 
-    ////// HELP 전부 일괄적용이 되서 개별적으로 적용하고 싶어요!!/////////////////////
     //1. 최소화 버튼
-
     var documini = $(".my_info_window").find(".mini_btn");
     var funmini = $(".my_function_window").find(".mini_btn");
     var trashmini = $(".trash_can_window").find(".mini_btn");
@@ -250,6 +362,7 @@ $(function () { /////// jQB ///////////////////////
             height: 0,
             opacity: 0
         }, 400); /// animate //////
+        $(this).parents(".popup_design").fadeOut();
     }); ///////// click //////////////////    
 
     funmini.click(function () {
@@ -263,6 +376,7 @@ $(function () { /////// jQB ///////////////////////
             height: 0,
             opacity: 0
         }, 400); /// animate //////
+        $(this).parents(".popup_design").fadeOut();
     }); ///////// click //////////////////
 
     trashmini.click(function () {
@@ -276,6 +390,7 @@ $(function () { /////// jQB ///////////////////////
             height: 0,
             opacity: 0
         }, 400); /// animate //////
+        $(this).parents(".popup_design").fadeOut();
     }); ///////// click //////////////////
 
     porfolmini.click(function () {
@@ -289,6 +404,7 @@ $(function () { /////// jQB ///////////////////////
             height: 0,
             opacity: 0
         }, 400); /// animate //////
+        $(this).parents(".popup_design").fadeOut();
     }); ///////// click //////////////////
 
 
@@ -321,9 +437,12 @@ $(function () { /////// jQB ///////////////////////
 
         }); //////// each //////////////
 
-
     }); //////// click ///////////////////////
-
+    
+    
+    
+    
+    
 
 
 
@@ -348,9 +467,19 @@ $(function () { /////// jQB ///////////////////////
 
     var charimg = $(".charact_img");
 
+    
+    /*포트폴리오 창 닫았을 경우*/
+    $(".portfolio_window").find(".close_btn").click(function() {
+        $(".porfol_logo").css({opacity :"0"});
+        $(".portfolio_intro_wrap").fadeIn(1200);
+        $(".portfolio_intro_wrap").siblings("section").fadeOut(600);
+        charimg.attr("src", "images/character.png");
+    }); //////// click ///////////////////////
+    
+    
 
     //포트폴리오 창 클릭시 넘어가기
-    $(".portfolio_intro_wrap").click(function () {
+    $(".portfolio_intro_wrap").click(function() {
         $(".portfolio_intro_wrap").fadeOut(600);
         $(".finsh_wrap").fadeIn(1200).find(".spani1").css({
             left: "0"
@@ -360,23 +489,24 @@ $(function () { /////// jQB ///////////////////////
 
 
     //캐틱터 다음 버튼 넘어가기
-    $(".charac_select_btn").click(function () {
+    $(".charac_select_btn").click(function() {
         $(".character_select_wrap").delay(1600).fadeOut(600);
         charimg.attr("src", "images/characterjump.png");
         $(".map_select_wrap").fadeIn(1200);
+        $(".map_select_wrap").scrollTop(0);
     }); ////// click /////////////////////////
 
     //맵 이전 버튼 넘어가기
-    $(".prev_btn").click(function () {
+    $(".prev_btn").click(function() {
         $(".map_select_wrap").fadeOut(600);
-
+        $(".map_select_wrap").scrollTop(0);
         charimg.attr("src", "images/character.png");
         $(".character_select_wrap").fadeIn(1200);
 
     }); ////// click /////////////////////////
 
     //맵 다음 버튼 넘어가기
-    $(".map_select_btn").click(function () {
+    $(".map_select_btn").click(function() {
         $(".map_select_wrap").fadeOut(600);
         $(".finsh_wrap").fadeIn(1200).find(".spani1").animate({
             left: "100%"
@@ -384,21 +514,19 @@ $(function () { /////// jQB ///////////////////////
 
     }); ////// click /////////////////////////
 
-    
-    
-    
-    $(".go_fir").click(function () {
-        $(".finsh_wrap").fadeOut(600);
-        $(".finsh_wrap").find(".spani1").css({
-            left: "0"
-        }); /// css ////
-        // 도착속도 보다 빨리 처음으로 클릭하는 경우 오류 발생.
-        
-        
-        charimg.attr("src", "images/character.png");
-        $(".portfolio_intro_wrap").fadeIn(600);    
-    }); ///// click //////////////////////
 
+
+
+    $(".go_fir").click(function (event) {
+        $(".finsh_wrap").fadeOut(600);
+
+        $(".finsh_wrap").find(".spani1").animate({
+            left: "0"
+        }, 1000); /// animate ////
+        charimg.attr("src", "images/character.png");
+        $(".portfolio_intro_wrap").fadeIn(600);
+        $(".map_select_wrap").scrollTop(0);
+    }); ///// click //////////////////////
 
 
 
