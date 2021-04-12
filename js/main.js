@@ -2,7 +2,7 @@ $(function () { /////// jQB ///////////////////////
     console.log("로딩완료!");
 
     ///// 창 숨기기 //////
-    $(".intro_window").hide();
+    //$(".intro_window").hide();
 
     $(".my_info_window").hide();
     $(".my_function_window").hide();
@@ -39,12 +39,12 @@ $(function () { /////// jQB ///////////////////////
     //    }); /// click /////
 
     // 종료 버튼 클릭시
-    $(".start_end a").click(function () {
+    $(".st_power").click(function close() {
         window.open('', '_self', '');
         window.close();
         return false;
     });
-
+    //크롬 업데이트 때문에 적용 안됌;;;
 
 
 
@@ -340,7 +340,18 @@ $(function () { /////// jQB ///////////////////////
         $(".st_token").click(function () {
             $(".st_left").fadeIn(200);
         });
+
+        // 탭메뉴 잉여 기능 지우기 //
+        var mini = $(".popup_design").find(".mini_btn");
+        var maxy = $(".popup_design").find(".maxy_btn");
+
+        mini.hide();
+        maxy.hide();
     } /// if ////////////////
+    else {
+        console.log("1400이상 크기!");
+        $(".st_left").show();
+    }
 
 
     ////////////////// 탭메뉴 기능 적용하기 ///////////////////////
@@ -438,11 +449,7 @@ $(function () { /////// jQB ///////////////////////
         }); //////// each //////////////
 
     }); //////// click ///////////////////////
-    
-    
-    
-    
-    
+
 
 
 
@@ -467,46 +474,52 @@ $(function () { /////// jQB ///////////////////////
 
     var charimg = $(".charact_img");
 
-    
+
     /*포트폴리오 창 닫았을 경우*/
-    $(".portfolio_window").find(".close_btn").click(function() {
-        $(".porfol_logo").css({opacity :"0"});
+    $(".portfolio_window").find(".close_btn").click(function () {
+        $(".porfol_logo").css({
+            opacity: "0"
+        });
         $(".portfolio_intro_wrap").fadeIn(1200);
         $(".portfolio_intro_wrap").siblings("section").fadeOut(600);
         charimg.attr("src", "images/character.png");
     }); //////// click ///////////////////////
-    
-    
+
+
 
     //포트폴리오 창 클릭시 넘어가기
-    $(".portfolio_intro_wrap").click(function() {
+    $(".portfolio_intro_wrap").click(function () {
         $(".portfolio_intro_wrap").fadeOut(600);
         $(".finsh_wrap").fadeIn(1200).find(".spani1").css({
             left: "0"
         });
         $(".character_select_wrap").fadeIn(1200);
+        $(".character_select_wrap").scrollTop(0);
     }); ////// click /////////////////////////
 
 
     //캐틱터 다음 버튼 넘어가기
-    $(".charac_select_btn").click(function() {
+    $(".charac_select_btn").click(function () {
         $(".character_select_wrap").delay(1600).fadeOut(600);
         charimg.attr("src", "images/characterjump.png");
+
         $(".map_select_wrap").fadeIn(1200);
         $(".map_select_wrap").scrollTop(0);
     }); ////// click /////////////////////////
 
     //맵 이전 버튼 넘어가기
-    $(".prev_btn").click(function() {
+    $(".prev_btn").click(function () {
         $(".map_select_wrap").fadeOut(600);
         $(".map_select_wrap").scrollTop(0);
+
         charimg.attr("src", "images/character.png");
         $(".character_select_wrap").fadeIn(1200);
+        $(".character_select_wrap").scrollTop(0);
 
     }); ////// click /////////////////////////
 
     //맵 다음 버튼 넘어가기
-    $(".map_select_btn").click(function() {
+    $(".map_select_btn").click(function () {
         $(".map_select_wrap").fadeOut(600);
         $(".finsh_wrap").fadeIn(1200).find(".spani1").animate({
             left: "100%"
@@ -516,16 +529,16 @@ $(function () { /////// jQB ///////////////////////
 
 
 
-
+    // 처음으로 버튼 클릭
     $(".go_fir").click(function (event) {
         $(".finsh_wrap").fadeOut(600);
 
         $(".finsh_wrap").find(".spani1").animate({
             left: "0"
         }, 1000); /// animate ////
+
         charimg.attr("src", "images/character.png");
         $(".portfolio_intro_wrap").fadeIn(600);
-        $(".map_select_wrap").scrollTop(0);
     }); ///// click //////////////////////
 
 
@@ -544,7 +557,18 @@ $(function () { /////// jQB ///////////////////////
 
 
     //////걷는 애니메이션 효과 /////
+    
+    
+    ///// 포트 폴리오 프로젝트 이미지 /////
 
-
+    for (var i = 1; i < 11; i++) {
+        $(".cooper_map_select_list li:nth-child(" + i + ")").find("span")
+            .css({
+                "background": "url(images/joint_project/" + i + ".PNG)",
+                "background-repeat": "no-repeat",
+                "background-position": "center",
+                "background-size": "cover"
+            }); //// css ///////
+    } /////// for ////////////////
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////

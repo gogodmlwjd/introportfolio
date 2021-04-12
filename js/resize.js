@@ -66,7 +66,17 @@ $(function () { /////// jQB ///////////////////////
 
             mini.hide();
             maxy.hide();
-
+            
+            
+            $(".st_left").removeClass("import");
+            $(".st_left").show();
+            
+            $(".st_left").click(function () {
+                $(this).fadeOut(200);
+            }); ///// click //////
+            $(".st_token").click(function () {
+                $(".st_left").fadeIn(200);
+            });
 
 
         }
@@ -85,12 +95,18 @@ $(function () { /////// jQB ///////////////////////
 
             mini.show();
             maxy.show();
+            
+            $(".st_left").addClass("import");
+
+            //            if ($(".st_top").css({display: "block"})) {
+            //                $(".st_left").show();
+            //            } /////////
 
         } ///// else /////////////////////////////////////////////////////////
-        
-  
+
+
     }); /// resize //////////
-    
-    
+
+
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////

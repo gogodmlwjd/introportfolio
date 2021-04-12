@@ -8,6 +8,10 @@
 @import url(core.css);
 */
 
+/*노토산*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
 
 * {
     padding: 0;
@@ -64,6 +68,7 @@ body {
     bottom: 0;
     background-color: #000;
     color: #fff;
+    z-index: 10000;
     /*    display: none;*/
 }
 
@@ -262,6 +267,10 @@ body {
 .st_left > h2 img {
     height: 28px;
     margin-top: 4px;
+}
+
+.st_left.import{
+    display: block !important;
 }
 
 .htxt{
@@ -626,7 +635,7 @@ body {
     font-size: 14px;
     text-align: center;
 }
-.pop_menu_tab > ul > li:hover a{
+.pop_menu_tab > ul > li:hover > a{
     opacity: .6;
 }
 .pop_menu_tab > ul >li:nth-child(1):hover .Info_list{
@@ -637,6 +646,12 @@ body {
 }
 .pop_menu_tab > ul > li:nth-child(3):hover .cont_list{
     display: block;
+}
+
+.cont_list > a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .pop_menu_tab > ul > li > ul li:hover{
@@ -720,7 +735,8 @@ body {
 }
 
 .my_info div h2 {
-    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    /*width: 100%;*/
 }
 
 .my_info div span {
@@ -761,6 +777,9 @@ body {
     padding-top: 2%;
 }
 
+.pop_contant_wrap section ul{
+    font-family: 'Noto Sans KR', sans-serif;
+}
 .pop_contant_wrap section ul h2 {
     width: 180px;
     max-width: 100%;
@@ -1024,8 +1043,8 @@ span.active{
 }
 
 .character_info li > h4{
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.875rem;
+    line-height: 3rem;
 }
 
 .character_story {
@@ -1035,8 +1054,8 @@ span.active{
 
 .character_info p {
     height: 100%;
-    font-size: 1.75rem;
-    line-height: 1.875rem;
+    font-size: 24px;
+    line-height: 28px;
 }
 
 .character_info > li:nth-child(6) {
@@ -1072,6 +1091,7 @@ span.active{
     left: 50%;
     top: 50%;
     transform: translate(-50% , -50%);
+    font-weight: 400;
     opacity: 0;
     transition: all .4s ease-in-out;
 }
@@ -1116,9 +1136,11 @@ span.active{
     display: none;
 }
 
+/*
 .map_select_wrap *{
     outline: 1px dashed red;
 }
+*/
 
 .map_select_area {
     margin-top: 100px;
@@ -1131,37 +1153,41 @@ span.active{
 
 .map_select_tit {
     font-size: 6vw;
-    margin-bottom: 2vw;
+    margin-bottom: 3vw;
     /*    font-size: 5rem;*/
 }
 
 .map_select_list > li {
     min-height: 300px;
     display: flex;
+    margin-bottom: 30px;
 }
 
 .site_prevw {
     flex: 1;
     display: block;
+    width: 100%;
     padding: 20px;
     position: relative;
 }
-/*
 .site_prevw::after {
     position: absolute;
-    content: 'Click';
-    left: 0;
-    right: 0;
+    content: 'Click!';
+    width: 100%;
+    height: 100%;
+    left: 50%;
     top: 0;
-    bottom: 0;
+    line-height: 300px;
+    transform: translateX(-50%);
     color: #fff;
     background-color: rgba(0, 0, 0, 0.55);
     opacity: 0;
+    transition: all .4s;
 }
+
 .site_prevw:hover::after {
     opacity: 1;
 }
-*/
 
 .site_prevw span {
     display: block;
@@ -1180,21 +1206,35 @@ span.active{
 .site_explan {
     flex: 2;
     display: block;
+    padding: 20px;
 }
 
 .site_name{
     font-size: 3vw;
     line-height: 4vw;/*어색하면 삭제*/
+    margin-bottom: 30px;
+}
+
+.site.space{
+    display: block;
 }
 
 .site_explan > p{
-        
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.cooper_map_select_list .site_explan > p{
+    font-weight: bold;
+}
+
+.cooper_map_select_list .site_explan > p small{
+    font-weight: 200;
 }
 
 .cooper_map_tit {
     margin-top: 200px;
     font-size: 4vw;
-    margin-bottom: 1.5vw;
+    margin-bottom: 2vw;
 }
 
 .cooper_map_select_list {
@@ -1206,6 +1246,7 @@ span.active{
     margin: 0 auto;
     min-height: 240px;
     display: flex;
+    margin-bottom: 20px;
 }
 
 .cooper_map_select_list > li:nth-child(1) a span {
@@ -1214,6 +1255,9 @@ span.active{
 
 .cooper_map_select_list > li:nth-child(2) a span {
     background: green;
+}
+.cooper_map_select_list > li .site_prevw::after{
+    line-height: 240px;
 }
 
 .prev_btn {
@@ -1258,9 +1302,11 @@ span.active{
     height: 141px;
     background: url(../images/walk1.png) no-repeat 0 0 / cover;
 }
+/*
 .finst_area *{
     outline: 1px dashed red;
 }
+*/
 
 .finst_area h5 {
     font-size: 3vw;
@@ -1298,7 +1344,7 @@ span.active{
     transform: translateY(-50%);
     background-image: url(../images/moving.png);
     background-size: auto 180px;
-    outline: 2px solid blue;
+/*    outline: 2px solid blue;*/
     /* 애니메이션 */
     animation: spani1 1s steps(4) infinite;
 }

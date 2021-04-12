@@ -3,7 +3,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
     showTime(); // 최초호출!
 
-
+    //setInterval(showTime, 1000);
+            setInterval("showTime()", 1000);//위와 같이 표기 할 수도 있다.
+            //함수명을 직접쓸때는 괄호를 안하고 씀(전달값없을때)
+            //따옴표로 쓸경우엔 괄호를 사용해야함!
 
 }); //// 로드구역 //////////////////////////////
 /////////////////////////////////////////////
@@ -26,7 +29,7 @@ function showTime() {
     var H = today.getHours();
     var M = today.getMinutes();
 
-    console.log("현재시간" + H + ":" + M);
+    //console.log("현재시간" + H + ":" + M);
 
 
 
@@ -41,10 +44,10 @@ function showTime() {
 
     //시간넣기(오후일 경우 12를 뺀다! - 24시간제로 표시되기때문)
     if (H > 12) H = H - 12;
-
+    
 
     // 한자리 숫자이면 앞에 "0"넣기
-    if (H < 10) H = "0" + H;
+    if (H < 10) H = "0" + H
     document.querySelector(".hour").innerText = H;
 
     // 분 넣기
