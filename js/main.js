@@ -500,8 +500,8 @@ $(function () { /////// jQB ///////////////////////
 
     //캐틱터 다음 버튼 넘어가기
     $(".charac_select_btn").click(function () {
-        $(".character_select_wrap").delay(1600).fadeOut(600);
         charimg.attr("src", "images/characterjump.png");
+        $(".character_select_wrap").delay(1600).fadeOut(600);
 
         $(".map_select_wrap").fadeIn(1200);
         $(".map_select_wrap").scrollTop(0);
